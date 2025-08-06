@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>يوتيوب - مشاهدة الفيديوهات</title>
+    <link rel="stylesheet" href="youtube-style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="header-left">
+            <button class="menu-btn" id="menuBtn">
+                <i class="fas fa-bars"></i>
+            </button>
+            <div class="logo">
+                <i class="fab fa-youtube"></i>
+                <span>يوتيوب</span>
+            </div>
+        </div>
+
+        <div class="header-center">
+            <div class="search-container">
+                <input type="text" placeholder="بحث" class="search-input">
+                <button class="search-btn">
+                    <i class="fas fa-search"></i>
+                </button>
+            </div>
+            <button class="voice-search-btn">
+                <i class="fas fa-microphone"></i>
+            </button>
+        </div>
+
+        <div class="header-right">
+            <button class="header-btn">
+                <i class="fas fa-video"></i>
+            </button>
+            <button class="header-btn">
+                <i class="fas fa-th"></i>
+            </button>
+            <button class="header-btn">
+                <i class="fas fa-bell"></i>
+                <span class="notification-count">9</span>
+            </button>
+            <div class="user-avatar">
+                <img src="https://via.placeholder.com/32" alt="User">
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Container -->
+    <div class="main-container">
+        <!-- Sidebar -->
+        <nav class="sidebar" id="sidebar">
+            <div class="sidebar-section">
+                <a href="#" class="sidebar-link active">
+                    <i class="fas fa-home"></i>
+                    <span>الرئيسية</span>
+                </a>
+                <a href="#" class="sidebar-link">
+                    <i class="fas fa-compass"></i>
+                    <span>استكشاف</span>
+                </a>
+                <a href="#" class="sidebar-link">
+                    <i class="fas fa-play"></i>
+                    <span>الاشتراكات</span>
+                </a>
+            </div>
+
+            <div class="sidebar-divider"></div>
+
+            <div class="sidebar-section">
+                <a href="#" class="sidebar-link">
+                    <i class="fas fa-folder"></i>
+                    <span>المكتبة</span>
+                </a>
+                <a href="#" class="sidebar-link">
+                    <i class="fas fa-history"></i>
+                    <span>السجل</span>
+                </a>
+                <a href="#" class="sidebar-link">
+                    <i class="fas fa-play-circle"></i>
+                    <span>فيديوهاتك</span>
+                </a>
+                <a href="#" class="sidebar-link">
+                    <i class="fas fa-clock"></i>
+                    <span>مشاهدة لاحقاً</span>
+                </a>
+                <a href="#" class="sidebar-link">
+                    <i class="fas fa-thumbs-up"></i>
+                    <span>الفيديوهات المعجبة</span>
+                </a>
+            </div>
+
+            <div class="sidebar-divider"></div>
+
+            <div class="sidebar-section">
+                <h3 class="sidebar-title">الاشتراكات</h3>
+                <a href="#" class="sidebar-link">
+                    <img src="https://via.placeholder.com/24" alt="Channel" class="channel-avatar">
+                    <span>قناة التقنية</span>
+                </a>
+                <a href="#" class="sidebar-link">
+                    <img src="https://via.placeholder.com/24" alt="Channel" class="channel-avatar">
+                    <span>قناة التعليم</span>
+                </a>
+                <a href="#" class="sidebar-link">
+                    <img src="https://via.placeholder.com/24" alt="Channel" class="channel-avatar">
+                    <span>قناة الترفيه</span>
+                </a>
+                <a href="#" class="sidebar-link">
+                    <img src="https://via.placeholder.com/24" alt="Channel" class="channel-avatar">
+                    <span>قناة الرياضة</span>
+                </a>
+            </div>
+
+            <div class="sidebar-divider"></div>
+
+            <div class="sidebar-section">
+                <h3 class="sidebar-title">استكشاف</h3>
+                <a href="#" class="sidebar-link">
+                    <i class="fas fa-fire"></i>
+                    <span>الأكثر رواجاً</span>
+                </a>
+                <a href="#" class="sidebar-link">
+                    <i class="fas fa-music"></i>
+                    <span>الموسيقى</span>
+                </a>
+                <a href="#" class="sidebar-link">
+                    <i class="fas fa-gamepad"></i>
+                    <span>الألعاب</span>
+                </a>
+                <a href="#" class="sidebar-link">
+                    <i class="fas fa-newspaper"></i>
+                    <span>الأخبار</span>
+                </a>
+                <a href="#" class="sidebar-link">
+                    <i class="fas fa-trophy"></i>
+                    <span>الرياضة</span>
+                </a>
+            </div>
+        </nav>
+
+        <!-- Content Area -->
+        <main class="content">
+            <!-- Category Chips -->
+            <div class="category-chips">
+                <button class="chip active">الكل</button>
+                <button class="chip">الموسيقى</button>
+                <button class="chip">الألعاب</button>
+                <button class="chip">الأخبار</button>
+                <button class="chip">الرياضة</button>
+                <button class="chip">التعليم</button>
+                <button class="chip">الطبخ</button>
+                <button class="chip">السفر</button>
+                <button class="chip">التقنية</button>
+                <button class="chip">الكوميديا</button>
+            </div>
+
+            <!-- Video Grid -->
+            <div class="video-grid" id="videoGrid">
+                <!-- Video items will be generated by JavaScript -->
+            </div>
+        </main>
+    </div>
+
+    <!-- Video Player Modal -->
+    <div class="video-modal" id="videoModal">
+        <div class="video-modal-content">
+            <button class="close-modal" id="closeModal">
+                <i class="fas fa-times"></i>
+            </button>
+            
+            <div class="video-player-container">
+                <video class="video-player" id="videoPlayer" controls>
+                    <source src="" type="video/mp4">
+                    متصفحك لا يدعم تشغيل الفيديو.
+                </video>
+            </div>
+
+            <div class="video-info">
+                <h2 class="video-title" id="modalVideoTitle"></h2>
+                <div class="video-meta">
+                    <div class="video-stats">
+                        <span id="modalVideoViews"></span>
+                        <span id="modalVideoDate"></span>
+                    </div>
+                    <div class="video-actions">
+                        <button class="action-btn">
+                            <i class="fas fa-thumbs-up"></i>
+                            <span>إعجاب</span>
+                        </button>
+                        <button class="action-btn">
+                            <i class="fas fa-thumbs-down"></i>
+                            <span>عدم إعجاب</span>
+                        </button>
+                        <button class="action-btn">
+                            <i class="fas fa-share"></i>
+                            <span>مشاركة</span>
+                        </button>
+                        <button class="action-btn">
+                            <i class="fas fa-download"></i>
+                            <span>تحميل</span>
+                        </button>
+                        <button class="action-btn">
+                            <i class="fas fa-plus"></i>
+                            <span>حفظ</span>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="channel-info">
+                    <div class="channel-avatar">
+                        <img src="" alt="Channel" id="modalChannelAvatar">
+                    </div>
+                    <div class="channel-details">
+                        <h3 class="channel-name" id="modalChannelName"></h3>
+                        <p class="channel-subscribers" id="modalChannelSubs"></p>
+                    </div>
+                    <button class="subscribe-btn">اشتراك</button>
+                </div>
+
+                <div class="video-description">
+                    <p id="modalVideoDescription"></p>
+                </div>
+            </div>
+
+            <!-- Comments Section -->
+            <div class="comments-section">
+                <div class="comments-header">
+                    <h3>التعليقات</h3>
+                    <div class="sort-comments">
+                        <i class="fas fa-sort"></i>
+                        <span>ترتيب حسب</span>
+                    </div>
+                </div>
+
+                <div class="add-comment">
+                    <img src="https://via.placeholder.com/40" alt="User" class="comment-avatar">
+                    <input type="text" placeholder="إضافة تعليق عام..." class="comment-input">
+                </div>
+
+                <div class="comments-list">
+                    <div class="comment">
+                        <img src="https://via.placeholder.com/40" alt="User" class="comment-avatar">
+                        <div class="comment-content">
+                            <div class="comment-header">
+                                <span class="comment-author">أحمد محمد</span>
+                                <span class="comment-time">منذ يوم واحد</span>
+                            </div>
+                            <p class="comment-text">فيديو رائع! شكراً لك على المحتوى المفيد</p>
+                            <div class="comment-actions">
+                                <button class="comment-action">
+                                    <i class="fas fa-thumbs-up"></i>
+                                    <span>25</span>
+                                </button>
+                                <button class="comment-action">
+                                    <i class="fas fa-thumbs-down"></i>
+                                </button>
+                                <button class="comment-action">رد</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="comment">
+                        <img src="https://via.placeholder.com/40" alt="User" class="comment-avatar">
+                        <div class="comment-content">
+                            <div class="comment-header">
+                                <span class="comment-author">فاطمة علي</span>
+                                <span class="comment-time">منذ 3 ساعات</span>
+                            </div>
+                            <p class="comment-text">معلومات قيمة جداً، في انتظار المزيد من هذا المحتوى</p>
+                            <div class="comment-actions">
+                                <button class="comment-action">
+                                    <i class="fas fa-thumbs-up"></i>
+                                    <span>12</span>
+                                </button>
+                                <button class="comment-action">
+                                    <i class="fas fa-thumbs-down"></i>
+                                </button>
+                                <button class="comment-action">رد</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="youtube-script.js"></script>
+</body>
+</html>
